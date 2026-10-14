@@ -217,7 +217,8 @@ private func arrowTip(start: CGPoint, end: CGPoint) -> (tip: CGPoint, unit: CGVe
     let dx = end.x - start.x
     let dy = end.y - start.y
     let length = (dx * dx + dy * dy).squareRoot()
-    guard length > 34 else { return nil }
+    // Short moves show only the faded ring; an arrow that short would sit inside it.
+    guard length > 64 else { return nil }
     let unit = CGVector(dx: dx / length, dy: dy / length)
     return (CGPoint(x: end.x - unit.dx * 26, y: end.y - unit.dy * 26), unit)
 }

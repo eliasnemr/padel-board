@@ -16,7 +16,7 @@ The plan borrows what got Club Kitten to the App Store in a day, and avoids what
 - [x] App icon (drawn by `scripts/make_icon.swift`; rerun with `swift scripts/make_icon.swift PadelBoard/Assets.xcassets/AppIcon.appiconset/icon.png`)
 - [ ] Check the name "Padel Board" is free in App Store Connect; create the app record (bundle ID `com.eliasnemr.padelboard`)
 - [x] Publish `docs/` with GitHub Pages: https://eliasnemr.github.io/padel-board/ (repo github.com/eliasnemr/padel-board)
-- [ ] Screenshots: 6.9-inch (1320 × 2868) and 6.5-inch (1284 × 2778)
+- [x] Screenshots: 6.9-inch (1320 × 2868) and 6.5-inch (1284 × 2778), from `scripts/screenshots.sh`
 - [ ] TestFlight on a real phone (drag feel, haptics), then submit
 
 ## v1.1: polish from first users

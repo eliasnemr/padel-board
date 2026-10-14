@@ -66,13 +66,13 @@ enum Plays {
         case .doubles:
             [
                 [.p1: Spot(x: 0.72, y: 0.93), .p2: Spot(x: 0.30, y: 0.62), .p3: Spot(x: 0.26, y: 0.07), .p4: Spot(x: 0.72, y: 0.30), .ball: Spot(x: 0.66, y: 0.92)],
-                [.p1: Spot(x: 0.68, y: 0.70), .p2: Spot(x: 0.32, y: 0.66), .p3: Spot(x: 0.30, y: 0.12), .p4: Spot(x: 0.72, y: 0.22), .ball: Spot(x: 0.30, y: 0.16)],
+                [.p1: Spot(x: 0.68, y: 0.70), .p2: Spot(x: 0.32, y: 0.66), .p3: Spot(x: 0.30, y: 0.12), .p4: Spot(x: 0.72, y: 0.22), .ball: Spot(x: 0.44, y: 0.21)],
                 [.p1: Spot(x: 0.66, y: 0.60), .p2: Spot(x: 0.34, y: 0.60), .p3: Spot(x: 0.30, y: 0.06), .p4: Spot(x: 0.70, y: 0.06), .ball: Spot(x: 0.50, y: 0.12)],
             ]
         case .singles:
             [
                 [.p1: Spot(x: 0.66, y: 0.93), .p3: Spot(x: 0.34, y: 0.07), .ball: Spot(x: 0.62, y: 0.92)],
-                [.p1: Spot(x: 0.50, y: 0.70), .p3: Spot(x: 0.42, y: 0.12), .ball: Spot(x: 0.36, y: 0.16)],
+                [.p1: Spot(x: 0.50, y: 0.70), .p3: Spot(x: 0.42, y: 0.12), .ball: Spot(x: 0.62, y: 0.20)],
                 [.p1: Spot(x: 0.50, y: 0.60), .p3: Spot(x: 0.50, y: 0.06), .ball: Spot(x: 0.70, y: 0.10)],
             ]
         }

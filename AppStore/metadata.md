@@ -42,6 +42,8 @@ Everything: None (4+)
 Padel Board is a single screen with no login. Drag the numbered players or the ball, tap steps 1–3 to see each stage of a point, or tap the play button to animate all three.
 
 ## Screenshots
-Order: doubles board, play mid-animation with arrows, singles board.
-- 6.9-inch (1320 × 2868)
-- 6.5-inch (1284 × 2778)
+Same four in both sizes, in this order: doubles board (step 1), approach (step 2, movement arrows), own the net (step 3), singles board.
+- 6.9-inch (1320 × 2868): `AppStore/screenshots/`
+- 6.5-inch (1284 × 2778): `AppStore/screenshots-6.5/`
+
+Regenerate both sets with `scripts/screenshots.sh` (builds Debug, boots an iPhone 17 Pro Max and an iPhone 14 Plus simulator, sets a 9:41 status bar and launches each state with `-fresh -court … -step …`).
