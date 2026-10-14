@@ -39,7 +39,7 @@ Everything: None (4+)
 **Data Not Collected.** Positions are stored only on the device; the app has no server, analytics or ads.
 
 ## Notes for App Review
-Padel Board is a single screen with no login. Drag the numbered players or the ball, tap steps 1–3 to see each stage of a point, or tap the play button to animate all three.
+Padel Board is a single screen with no login. A short How to use sheet opens on first launch (and from the ⓘ button). Drag the numbered players or the ball, tap steps 1–3 to see each stage of a point, or tap the play button to animate all three.
 
 ## Screenshots
 Same four in both sizes, in this order: doubles board (step 1), approach (step 2, movement arrows), own the net (step 3), singles board.

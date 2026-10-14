@@ -7,6 +7,9 @@ struct BoardView: View {
     @State private var playTask: Task<Void, Never>?
     @State private var dragging: Piece?
     @State private var hop = 0
+    @State private var showHelp = false
+    /// The help sheet opens once by itself, the first time the app starts.
+    @AppStorage("help.seen") private var helpSeen = false
 
     static let stepSeconds: Double = 1.8
     static let stepAnimation = Animation.spring(duration: 0.8, bounce: 0.35)
@@ -39,6 +42,25 @@ struct BoardView: View {
         .foregroundStyle(Theme.text)
         .sensoryFeedback(.selection, trigger: store.step)
         .sensoryFeedback(.impact(flexibility: .soft), trigger: dragging) { _, new in new != nil }
+        .sheet(isPresented: $showHelp, onDismiss: { helpSeen = true }) {
+            HelpView()
+                .presentationDragIndicator(.visible)
+        }
+        .onAppear {
+            if !helpSeen && !Self.isScreenshotRun { showHelp = true }
+            #if DEBUG
+            if ProcessInfo.processInfo.arguments.contains("-help") { showHelp = true }
+            #endif
+        }
+    }
+
+    /// Debug screenshot runs (`-fresh`) skip the first-launch help sheet.
+    private static var isScreenshotRun: Bool {
+        #if DEBUG
+        ProcessInfo.processInfo.arguments.contains("-fresh")
+        #else
+        false
+        #endif
     }
 
     // MARK: - Header
@@ -49,6 +71,17 @@ struct BoardView: View {
                 .font(.system(size: 26, weight: .bold))
                 .accessibilityAddTraits(.isHeader)
             Spacer()
+            Button {
+                stop()
+                showHelp = true
+            } label: {
+                Image(systemName: "info")
+                    .font(.system(size: 17, weight: .bold))
+                    .frame(width: 44, height: 44)
+                    .background(Circle().fill(Theme.surface).shadow(color: .black.opacity(0.06), radius: 4, y: 2))
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("How to use")
             Button {
                 stop()
                 withAnimation(Self.stepAnimation) { store.resetStep() }

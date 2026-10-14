@@ -13,6 +13,7 @@ The plan borrows what got Club Kitten to the App Store in a day, and avoids what
 - [x] Three steps with movement arrows, play button, ball hop, haptics
 - [x] Positions saved on the device; reset a step
 - [x] Fits an iPhone SE / iPad compatibility window
+- [x] How to use sheet (ⓘ button; opens once on first launch)
 - [x] App icon (drawn by `scripts/make_icon.swift`; rerun with `swift scripts/make_icon.swift PadelBoard/Assets.xcassets/AppIcon.appiconset/icon.png`)
 - [ ] Check the name "Padel Board" is free in App Store Connect; create the app record (bundle ID `com.eliasnemr.padelboard`)
 - [x] Publish `docs/` with GitHub Pages: https://eliasnemr.github.io/padel-board/ (repo github.com/eliasnemr/padel-board)
@@ -23,7 +24,6 @@ The plan borrows what got Club Kitten to the App Store in a day, and avoids what
 
 - Undo the last move
 - Landscape or iPad layout, if people ask for it
-- A short "drag a player" hint the first time the app opens
 
 ## Later: paid features (one-time unlock or subscription, StoreKit 2)
 
