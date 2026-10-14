@@ -44,6 +44,7 @@ Padel Board is a single screen with no login. Drag the numbered players or the b
 ## Screenshots
 Same four in both sizes, in this order: doubles board (step 1), approach (step 2, movement arrows), own the net (step 3), singles board.
 - 6.9-inch (1320 × 2868): `AppStore/screenshots/`
+- 6.3-inch, "iPhone with Dynamic Island (medium display)" in App Store Connect (1206 × 2622): `AppStore/screenshots-6.3/`
 - 6.5-inch (1284 × 2778): `AppStore/screenshots-6.5/`
 
-Regenerate both sets with `scripts/screenshots.sh` (builds Debug, boots an iPhone 17 Pro Max and an iPhone 14 Plus simulator, sets a 9:41 status bar and launches each state with `-fresh -court … -step …`).
+Regenerate both sets with `scripts/screenshots.sh` (builds Debug, boots iPhone 17 Pro Max, iPhone 17 Pro and iPhone 14 Plus simulators, sets a 9:41 status bar and launches each state with `-fresh -court … -step …`).

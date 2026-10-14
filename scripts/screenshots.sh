@@ -1,7 +1,9 @@
 #!/bin/zsh
-# Captures the App Store screenshots from a Debug build on two simulators:
+# Captures the App Store screenshots from a Debug build on iPhone simulators:
 #   6.9-inch: iPhone 17 Pro Max (1320 × 2868) → AppStore/screenshots/
+#   6.3-inch: iPhone 17 Pro     (1206 × 2622) → AppStore/screenshots-6.3/
 #   6.5-inch: iPhone 14 Plus    (1284 × 2778) → AppStore/screenshots-6.5/
+# Pass device names to capture only some sets: scripts/screenshots.sh 6.3
 # Usage: scripts/screenshots.sh   (from the repo root; builds first)
 set -euo pipefail
 
@@ -47,5 +49,9 @@ capture() {
   done
 }
 
-capture "6.9" com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro-Max "$ROOT/AppStore/screenshots"
-capture "6.5" com.apple.CoreSimulator.SimDeviceType.iPhone-14-Plus "$ROOT/AppStore/screenshots-6.5"
+wanted() { (( ${#ARGV} == 0 )) || (( ${ARGV[(Ie)$1]} )); }
+ARGV=("$@")
+wanted 6.9 && capture "6.9" com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro-Max "$ROOT/AppStore/screenshots"
+wanted 6.3 && capture "6.3" com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro "$ROOT/AppStore/screenshots-6.3"
+wanted 6.5 && capture "6.5" com.apple.CoreSimulator.SimDeviceType.iPhone-14-Plus "$ROOT/AppStore/screenshots-6.5"
+true
