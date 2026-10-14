@@ -13,7 +13,7 @@ The plan borrows what got Club Kitten to the App Store in a day, and avoids what
 - [x] Three steps with movement arrows, play button, ball hop, haptics
 - [x] Positions saved on the device; reset a step
 - [x] Fits an iPhone SE / iPad compatibility window
-- [ ] App icon (1024 × 1024): blocks the archive
+- [x] App icon (drawn by `scripts/make_icon.swift`; rerun with `swift scripts/make_icon.swift PadelBoard/Assets.xcassets/AppIcon.appiconset/icon.png`)
 - [ ] Check the name "Padel Board" is free in App Store Connect; create the app record (bundle ID `com.eliasnemr.padelboard`)
 - [ ] Publish `docs/` with GitHub Pages and fill in the privacy and support URLs
 - [ ] Screenshots: 6.9-inch (1320 × 2868) and 6.5-inch (1284 × 2778)
